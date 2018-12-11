@@ -36,7 +36,7 @@ func (ap *AvroProducer) GetSchemaId(topic string, avroCodec *goavro.Codec) (int,
 
 func (ap *AvroProducer) Add(topic string, schema string, key []byte, value []byte) error {
 	avroCodec, err := goavro.NewCodec(schema)
-	schemaId, err := ap.GetSchemaId(topic, avroCodec)
+	schemaId, err := ap.GetSchemaId(topic + "-value", avroCodec)
 	if err != nil {
 		return err
 	}
