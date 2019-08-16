@@ -1,4 +1,4 @@
-module github.com/cameronbraid/go-kafka-avro
+module github.com/aservedio-mv/go-kafka-avro
 
 require (
 	github.com/Shopify/sarama v1.21.0
